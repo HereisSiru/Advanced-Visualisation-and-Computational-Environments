@@ -1,5 +1,5 @@
 # Find Fun 'In Quarantine'
-### An AR & Unity project
+### An AR & Unity Project
 
 I made a virtual friend Kirby (星のカービィ) in my 'In Quarantine' APP.
 
