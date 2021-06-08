@@ -1,16 +1,20 @@
 # Find Fun 'In Quarantine'
 ### An AR & Unity Project
 
+
+#### Game Demo Video: https://youtu.be/XpMvlw15VoQ
+
+
+#### Iterative Design Recording：https://youtu.be/Cz1tZ5khXWk
+
+<img width="360" alt="in app界面" src="https://user-images.githubusercontent.com/69792837/121137371-29013b80-c869-11eb-8f4b-4229fc134273.png">
+
+
 I made a virtual friend Kirby (星のカービィ) in my 'In Quarantine' APP.
 
 She will appear when I feel upset or down to accompany me in this hard Covid quarantine time.
 
-<img width="360" alt="in app界面" src="https://user-images.githubusercontent.com/69792837/121137371-29013b80-c869-11eb-8f4b-4229fc134273.png">
 
-* Game Demo Video: https://youtu.be/XpMvlw15VoQ
-
-
-* Iterative Design Recording：https://youtu.be/Cz1tZ5khXWk
 
 
 
