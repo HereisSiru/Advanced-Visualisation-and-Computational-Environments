@@ -1,112 +1,247 @@
-# Find Fun 'In Quarantine'
-### An AR & Unity Project
+# In Quarantine - AR Virtual Companion
 
+[![Unity Version](https://img.shields.io/badge/Unity-2021.3%2B-blue)](https://unity3d.com/)
+[![AR Foundation](https://img.shields.io/badge/AR%20Foundation-4.2%2B-green)](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/index.html)
+[![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey)](https://unity3d.com/)
 
-#### Game Demo Video: https://youtu.be/XpMvlw15VoQ
+**An AR virtual companion app featuring Kirby (星のカービィ) designed to provide emotional support and companionship during quarantine periods.**
 
+<div align="center">
 
-#### Iterative Design Recording：https://youtu.be/Cz1tZ5khXWk
+| Demo Video | Development Process |
+|------------|-------------------|
+| [![Game Demo](https://img.youtube.com/vi/XpMvlw15VoQ/0.jpg)](https://youtu.be/XpMvlw15VoQ) | [![Iterative Design](https://img.youtube.com/vi/Cz1tZ5khXWk/0.jpg)](https://youtu.be/Cz1tZ5khXWk) |
 
-<img width="360" alt="in app界面" src="https://user-images.githubusercontent.com/69792837/121137371-29013b80-c869-11eb-8f4b-4229fc134273.png">
+</div>
 
+## 🌟 Overview
 
-I made a virtual friend Kirby (星のカービィ) in my 'In Quarantine' APP.
+"In Quarantine" is an AR application that brings a virtual companion into your real environment during challenging isolation periods. Featuring the beloved character Kirby, this app provides emotional support, interactive entertainment, and encouraging reminders to help make quarantine time more bearable.
 
-She will appear when I feel upset or down to accompany me in this hard Covid quarantine time.
+### 🎯 Purpose
 
+This project was created during the COVID-19 pandemic when the developer experienced quarantine isolation in Shanghai. The app aims to:
+- Provide companionship during isolation periods
+- Offer emotional support through interactive features
+- Create positive distractions during challenging times
+- Demonstrate practical applications of AR technology for mental health
 
+## ✨ Features
 
+### 🎮 Core AR Features
+- **Plane Detection**: Automatic detection of horizontal and vertical surfaces
+- **Touch/Tap Placement**: Place Kirby in your environment with a simple tap
+- **Smooth Movement**: Relocate your companion with fluid animations
+- **Placement Indicator**: Visual feedback showing where Kirby will appear
+- **Double-tap Reset**: Easily reset placement to try new locations
 
+### 🤖 Interactive Companion System
+- **Mood System**: Kirby's emotional state changes based on interaction
+- **Touch Interactions**: Tap Kirby to boost happiness and trigger animations
+- **Audio Feedback**: Varied sound responses for different interactions
+- **Visual Effects**: Particle effects and lighting that reflect Kirby's mood
+- **Encouraging Messages**: Periodic reminders and motivational quotes
 
+### 💫 Enhanced Experience
+- **Mobile & Desktop Support**: Works with both touch and mouse input
+- **Visual Feedback**: Dynamic lighting and particle effects
+- **Audio System**: Comprehensive sound design for immersive experience
+- **Performance Optimized**: Efficient code structure for smooth performance
 
+## 🔧 Technical Requirements
 
-### Why I made it?
+### Minimum Requirements
+- **Unity**: 2021.3 LTS or later
+- **AR Foundation**: 4.2.0 or later
+- **iOS**: iOS 12+ with A12 chip (iPhone XS/XR or later)
+- **Android**: Android 7.0+ with ARCore support
 
+### Recommended Setup
+- Modern smartphone with good camera quality
+- Well-lit environment for better plane detection
+- Stable surface for initial placement
 
+## 📱 Installation & Setup
 
-<img width="585" alt="Screenshot 2021-06-08 at 14 54 50" src="https://user-images.githubusercontent.com/69792837/121137712-85fcf180-c869-11eb-8844-1c68c63e251d.png">
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/in-quarantine-ar.git
+cd in-quarantine-ar
+```
 
+### 2. Unity Setup
+1. Open Unity Hub
+2. Click "Open" and select the project folder
+3. Ensure you have Unity 2021.3 LTS installed
+4. Wait for Unity to import all assets
 
+### 3. Install Required Packages
+The project uses these Unity packages:
+- AR Foundation (4.2.0+)
+- ARCore XR Plugin (Android)
+- ARKit XR Plugin (iOS)
+- XR Plugin Management
 
-Recently, I come back to China Mainland from the UK. According to the current policy, I have to have a quarantine time in Shanghai local Hotel. 
+**Auto-installation**: These should install automatically when opening the project.
 
+**Manual installation** (if needed):
+1. Window → Package Manager
+2. Select "Unity Registry"
+3. Search for and install each package listed above
 
-All things in the hotel are stranger to me and I have no choice. I need to stay in this hotel room for at least 14 days. I have no accompanies except my smart devices -- MY PHONES, MY MACBOOK, MY IPAD AND MY AIRPODS. 
+### 4. Platform Configuration
 
-It's harder than I think because I cannot go out. Initially, I was sent to a hotel in Shanghai's Changning district, but on the fourth day I was told there were COVID-infected people near me on the plane and I must be transferred to a more rigorous hotel immediately. I swear it's been an extremely stressful and terrible morning. 
+#### For iOS:
+1. File → Build Settings → iOS
+2. Player Settings → XR Plug-in Management → ARKit
+3. Set up iOS build settings (Team ID, Bundle Identifier, etc.)
 
-I have never been to jail but I suppose there is some similarities. I have to create some fun by myself in this hotel room.
+#### For Android:
+1. File → Build Settings → Android
+2. Player Settings → XR Plug-in Management → ARCore
+3. Ensure "ARCore Supported" is checked in XR Settings
 
-Through this semester's study, I have developed a strong interest in AR. So I made this project. The aiming of this project is I can get some fun in this boring and hard quarantine time. 
+### 5. Scene Setup
+1. Open the `InQuarantine.unity` scene
+2. Ensure AR Camera and AR Session are present
+3. Add the enhanced scripts to appropriate GameObjects:
+   - `SimpleRaycast.cs` → AR Camera or Scene Manager
+   - `VirtualCompanion.cs` → Kirby prefab
 
-I made a virtual friend Kirby (星のカービィ) in my 'In Quarantine' APP. She will appear when I feel upset or down to accompany me in this hard Covid quarantine time.
+## 🎮 How to Use
 
+### Basic Usage
+1. **Launch the app** on your AR-capable device
+2. **Point your camera** at a flat surface (table, floor, etc.)
+3. **Wait for plane detection** - you'll see a placement indicator
+4. **Tap the screen** where you want Kirby to appear
+5. **Interact with Kirby** by tapping on the character
 
+### Advanced Interactions
+- **Single Tap**: Place or move Kirby
+- **Tap Kirby**: Increase happiness and trigger animations
+- **Double Tap**: Reset placement (when Kirby is placed)
+- **Multiple Taps**: Build up happiness for special effects
 
+### Mood System
+- Kirby's mood affects visual effects and behaviors
+- Regular interaction keeps Kirby happy
+- Neglecting Kirby will slowly decrease mood
+- Happy Kirby shows sparkles and bright colors
 
-### I recorded some study process and iterative design in readme file.
+## 📁 Project Structure
 
-* Plane detection
+```
+In-Quarantine/
+├── Assets/
+│   ├── Scripts/
+│   │   ├── SimpleRaycast.cs          # Enhanced AR placement system
+│   │   └── VirtualCompanion.cs       # Interactive companion behaviors
+│   ├── Scenes/
+│   │   └── InQuarantine.unity        # Main AR scene
+│   ├── Prefabs/
+│   │   └── Kirby/                    # Kirby character assets
+│   └── Audio/                        # Sound effects and music
+├── Unity-iPhone.xcodeproj.zip        # iOS build project
+└── README.md                         # This file
+```
 
-* Use built-in functionality to detect horizontal and vertical planes
+## 🛠️ Development
 
-* Raycasting
+### Key Scripts
 
+#### `SimpleRaycast.cs`
+Enhanced AR placement system with:
+- Cross-platform input handling
+- Visual placement indicators
+- Smooth object movement
+- Audio feedback integration
+- Robust error handling
 
-#### see all details in added files or check Iterative Design Recording：https://youtu.be/Cz1tZ5khXWk
+#### `VirtualCompanion.cs`
+Comprehensive companion behavior system:
+- Mood and emotion simulation
+- Interactive touch responses
+- Audio-visual feedback
+- Encouraging message system
+- Animation state management
 
+### Customization Options
 
+#### Companion Settings
+```csharp
+[SerializeField] private string companionName = "Kirby";
+[SerializeField] private float interactionRadius = 2f;
+[SerializeField] private float idleAnimationInterval = 5f;
+```
 
- ``` 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.XR.ARFoundation;
+#### Quarantine Support Features
+```csharp
+[SerializeField] private bool enableReminders = true;
+[SerializeField] private float reminderInterval = 1800f; // 30 minutes
+[SerializeField] private string[] encouragingMessages = { /* ... */ };
+```
 
-public class SimpleRaycast : MonoBehaviour
-{
-   public ARRaycastManager raycastManager;
+## 🎨 Assets & Resources
 
-   public GameObject objectToPlacePrefab;
+### Audio Requirements
+- Greeting sounds for initial interaction
+- Happiness/joy sounds for positive interactions
+- Idle sounds for background ambiance
+- Interaction feedback sounds
 
-   public Camera raycastCamera;
+### Visual Effects
+- Particle systems for happiness indicators
+- Dynamic lighting for mood representation
+- Placement indicator prefab
+- Animation controller for Kirby
 
-   private GameObject objectInstance;
+### 3D Model Setup
+The Kirby model should include:
+- Animator component with trigger parameters:
+  - `Idle`, `Happy`, `Greet`, `Bored`, `VeryHappy`
+- Collider for touch detection
+- Audio source for companion sounds
 
-   private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+## 🤝 Contributing
 
+### How to Contribute
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
+### Development Guidelines
+- Follow Unity coding conventions
+- Add XML documentation for public methods
+- Test on both iOS and Android devices
+- Ensure backward compatibility
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (raycastManager == null)
-             return;
+## 📝 License
 
-        if (raycastCamera == null)
-             return;
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-        if (Input.GetMouseButtonDown(0))
-        {
-             Ray ray = raycastCamera. ScreenPointToRay(Input. mousePosition);
-             if(raycastManager.Raycast(ray, hits, UnityEngine.XR.ARSubsystems. TrackableType.Planes))
-             {
-                 Pose pose = hits[0].pose;
-                 if (objectInstance == null)
-                 {
-                      objectInstance = Instantiate<GameObject>(objectToPlacePrefab, pose.position, pose.rotation);
-                 }
-                 else
-                 {
-                     objectInstance.transform.SetPositionAndRotation(pose.position, pose.rotation);
-                 }
-             }
+## 🙏 Acknowledgments
 
-        }
-         
-    }
-}
+- **Nintendo** - For creating the beloved Kirby character
+- **Unity Technologies** - For AR Foundation framework
+- **The Quarantine Experience** - For inspiring this meaningful project
+- **Mental Health Awareness** - For highlighting the importance of companionship during isolation
 
+## 📞 Support & Contact
 
- ``` 
+- **Issues**: Please report bugs via GitHub Issues
+- **Questions**: Start a GitHub Discussion
+- **Updates**: Watch this repository for latest improvements
+
+---
+
+<div align="center">
+
+**Made with ❤️ during challenging times to bring joy and companionship to those in isolation**
+
+*"I'm here with you - you're not alone!"* - Kirby
+
+</div>
 
